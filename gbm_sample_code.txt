@@ -1,0 +1,17 @@
+setwd("C:/Users/tchen3/Desktop/uconn_case_comp")
+library(dismo)
+library(gbm)
+train=read.csv("./Kangaroo_train.csv")
+valid=read.csv("./Kangaroo_valid.csv")
+hold_out=read.csv("./Kangaroo_hold.csv")
+
+gbm_fit=gbm.step(valid,gbm.x=3:9,
+		     gbm.y=2,
+		     family="gaussian",
+		     n.trees=50,
+		     tree.compplexity=2,
+		     bag.fraction=0.2,
+	           learning.rate=0.1)
+
+
+hold_gbm<-predict.gbm(gbm_fit,hold_out,n.trees=gbm_fit$gbm.call$best.trees,type="response")
