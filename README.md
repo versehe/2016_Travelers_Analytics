@@ -1,4 +1,4 @@
-# 2016_Travelers_UCONN_vs_UMASS_Analytics_Case_Competition
+# 2016_Travelers_Analytics_Case_Competition
 
 The 2016 Travelers Analytics Case Competition is a modeling competition between UCONN and UMASS. The students were presented with real auto insurance data and have to provide a method for predicting the claim cost for each policy.
 
